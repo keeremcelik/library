@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity
 {
@@ -33,6 +34,7 @@ namespace Entity
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         
+        [Column(TypeName = "decimal(18,2)")]        
         public Decimal Price { get; set; }
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; }

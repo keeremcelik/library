@@ -118,4 +118,3 @@ C:\Users\90553\Desktop\kerem\kutuphane\WebUI\bin\Debug\netcoreapp3.1\Microsoft.O
 C:\Users\90553\Desktop\kerem\kutuphane\WebUI\bin\Debug\netcoreapp3.1\Microsoft.Spatial.dll
 C:\Users\90553\Desktop\kerem\kutuphane\WebUI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\90553\Desktop\kerem\kutuphane\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\90553\Desktop\kerem\kutuphane\WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Webapi\Index.cshtml.g.cs
