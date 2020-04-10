@@ -1,0 +1,19 @@
+@model IEnumerable<Entity.Type>
+<div class="list-group">
+        <a
+            href="/book"            
+            class="list-group-item bg-light">
+       All Books
+        </a>
+        @foreach (var item in Model)
+        {
+            <a 
+                asp-controller="Book"
+                asp-action="Index"
+                asp-route-id="@item.TypeId"
+                class="list-group-item @(ViewBag.SelectedType == item.TypeId.ToString()?"active":"")">
+                @item.Name
+            </a>
+        }   
+          
+</div>

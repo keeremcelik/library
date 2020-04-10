@@ -1,0 +1,83 @@
+@model BookModel
+@{
+ViewData["Title"] = "Book List Page";
+}
+
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-3">
+        <partial name="_PanelMenu" />
+        </div>
+        <div class="col-md-9">
+            
+                <div class="row">
+                      
+                    <div class="col">
+                        <div class="text-right mb-3">
+                            <a href="/book/create" class="btn btn-sm btn-primary">Create</a>
+                        </div>
+                        @if (Model.BookList.Count()>0)
+                        {
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <th>Id</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Author</th>
+                                    <th>Approved</th>
+                                    <th></th>
+
+                                </thead>
+                                <tbody>
+                                @foreach (var item in Model.BookList)
+                                {
+                                    <tr>
+                                        <td>@item.BookId</td>
+                                        <td>
+                                            <img height="100px;" src="~/img/@item.Image" alt="@item.Name">                                
+                                        </td>
+                                        <td>@item.Name</td>
+                                        <td>
+                                            @foreach (var author in Model.AuthorList)
+                                            {
+                                                @if (author.Id == item.AuthorId)
+                                                {
+                                                    @(author.Name+" "+ author.Surname)
+                                                }
+                                            }                                           
+                                        </td>
+                                        <td>
+                                            @if (@item.isApproved)
+                                            {
+                                                <span class="badge badge-success">Yes</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-danger">No</span>
+                                            }
+                                        </td>
+                                        <td>
+                                              <a class="btn btn-success btn-sm" asp-route-id="@item.BookId" asp-action="Details" asp-controller="Book">
+                                                    Detail</a>
+                                            <a class="btn btn-primary btn-sm" asp-route-id="@item.BookId" asp-action="Edit" asp-controller="Book">
+                                                    Edit</a>
+                                                <a class="btn btn-danger btn-sm" asp-route-id="@item.BookId" asp-action="Delete" asp-controller="Book">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                        <div class="alert alert-danger">
+                            Kitap Bulunamadı.
+                        </div>
+                        }
+                </div>
+            
+        </div>        
+    </div>        
+</div>
+

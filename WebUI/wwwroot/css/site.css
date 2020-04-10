@@ -1,0 +1,7 @@
+﻿.card-abstract
+{
+  display: -webkit-box;
+  -webkit-line-clamp: 14;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

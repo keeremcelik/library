@@ -1,0 +1,13 @@
+@model Entity.Publisher
+@{
+ViewData["Title"] = "Delete Publisher";
+}
+
+<h2>
+    <b>@Model.Name</b> isimli türü silmek istiyormusunuz ?
+
+</h2>
+<form asp-controller="Publisher" asp-action="Delete" method="POST">
+    <input type="hidden" asp-for="PublisherId">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

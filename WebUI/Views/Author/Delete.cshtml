@@ -1,0 +1,13 @@
+@model Author
+@{
+ViewData["Title"] = "Delete Author";
+}
+
+<h2>
+    <b>@Model.Name</b> isimli yazarı silmek istiyormusunuz ?
+
+</h2>
+<form asp-controller="Author" asp-action="Delete" method="POST">
+    <input type="hidden" asp-for="Id">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

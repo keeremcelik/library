@@ -1,0 +1,21 @@
+@model Entity.Language
+@{
+ViewData["Title"] = "Edit Language ";
+}
+<div class="container">
+    
+<form asp-action="Edit" asp-controller="Language" method="POST" >
+    <input type="hidden" asp-for="LanguageId">
+     <div class="form-group">
+   <label asp-for="Code">Code</label>
+    <input asp-for="Code" class="form-control" placeholder="Please enter language Code.">
+  </div>
+ <div class="form-group">
+   <label asp-for="Name">Name</label>
+    <input asp-for="Name" class="form-control" placeholder="Please enter language name.">
+  </div>
+  
+ 
+<button type="submit" class="btn btn-primary">Save</button>
+</form>
+</div>

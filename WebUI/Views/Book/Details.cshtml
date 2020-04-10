@@ -1,0 +1,77 @@
+@model dynamic  
+@{
+ViewData["Title"] = "Detail Book ";
+}
+
+
+<div class="jumbotron jumbotron-fluid">
+	<div class="container">
+		<h1 class="display-4">@Model.BookList.Name</h1>
+		<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class=" w-100 " role="group" >
+                
+                @if (@Model.BookList.isReaded==true)
+                {
+                    <a class="btn btn-block m-0" asp-action="MarkUnread" asp-controller="Book" asp-route-id="@Model.BookList.BookId"  title="Mark as the unread"><i class="fas fa-bookmark text-success"></i> Mark as Unread</a>
+                }
+                else
+                {
+                    <a class="btn btn-block m-0" asp-action="MarkRead" asp-controller="Book" asp-route-id="@Model.BookList.BookId" title="Mark as the read" ><i class="far fa-bookmark text-success"></i> Mark as Read</a>
+                }
+				@if (@Model.BookList.isFavorite==true)
+                {
+                    <a class="btn btn-block m-0" asp-action="RemoveFavorite" asp-controller="Book" asp-route-id="@Model.BookList.BookId"  title="Remove the favorite"><i class="fas fa-star text-warning "></i> Remove Favorite</a>
+                }
+                else
+                {
+                    <a class="btn btn-block m-0" asp-action="AddFavorite" asp-controller="Book" asp-route-id="@Model.BookList.BookId" title="Add the favorite" ><i class="far fa-star text-warning"></i> Add Favorite</a>
+                }
+                
+			</div>
+			
+			
+			<img style="width:100%;" src="~/img/@Model.BookList.Image" alt="@Model.BookList.Name">
+		</div>
+		<div class="col-md-8">
+			<table class="table table-sm table-bordered table-striped">                       
+				<tr>
+					<th>Name</th>
+					<td>@Model.BookList.Name</td>
+				</tr>
+				<tr>
+					<th>Page Count</th>
+					<td>@Model.BookList.PageCount</td>
+				</tr>
+				<tr>
+					<th>Author</th>
+					<td>@(Model.AuthorList.Name+ " " + Model.AuthorList.Surname)</td>
+				</tr>
+				<tr>
+					<th>Type</th>
+					<td>@Model.TypeList.Name</td>
+				</tr>
+				<tr>
+					<th>Language</th>
+					<td>@Model.LanguageList.Name</td>
+				</tr>
+				<tr>
+					<th>Publisher</th>
+					<td>@Model.PublisherList.Name</td>
+				</tr>
+				<tr>
+					<th>Publish Date</th>
+					<td>@Model.BookList.PublishDate.ToString("MMMM dd, yyyy")</td>
+				</tr>
+			</table>
+			
+			<p class="h5">Abstract</p>
+			<p>@Html.Raw(@Model.BookList.Abstract)</p>
+		</div>
+		
+	</div>
+</div>

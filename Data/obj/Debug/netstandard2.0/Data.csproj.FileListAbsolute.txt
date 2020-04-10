@@ -1,0 +1,12 @@
+C:\Users\90553\Desktop\kerem\kutuphane\Data\bin\Debug\netstandard2.0\Data.deps.json
+C:\Users\90553\Desktop\kerem\kutuphane\Data\bin\Debug\netstandard2.0\Data.dll
+C:\Users\90553\Desktop\kerem\kutuphane\Data\bin\Debug\netstandard2.0\Data.pdb
+C:\Users\90553\Desktop\kerem\kutuphane\Data\bin\Debug\netstandard2.0\Entity.dll
+C:\Users\90553\Desktop\kerem\kutuphane\Data\bin\Debug\netstandard2.0\Entity.pdb
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.csprojAssemblyReference.cache
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.AssemblyInfoInputs.cache
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.AssemblyInfo.cs
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.csproj.CopyComplete
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.dll
+C:\Users\90553\Desktop\kerem\kutuphane\Data\obj\Debug\netstandard2.0\Data.pdb

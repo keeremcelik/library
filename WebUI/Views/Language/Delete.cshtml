@@ -1,0 +1,13 @@
+@model Entity.Language
+@{
+ViewData["Title"] = "Delete Language";
+}
+
+<h2>
+    <b>@Model.Name</b> isimli dili silmek istiyormusunuz ?
+
+</h2>
+<form asp-controller="Language" asp-action="Delete" method="POST">
+    <input type="hidden" asp-for="LanguageId">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

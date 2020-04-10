@@ -1,0 +1,13 @@
+@model Entity.Type
+@{
+ViewData["Title"] = "Delete Type";
+}
+
+<h2>
+    <b>@Model.Name</b> isimli türü silmek istiyormusunuz ?
+
+</h2>
+<form asp-controller="Type" asp-action="Delete" method="POST">
+    <input type="hidden" asp-for="TypeId">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

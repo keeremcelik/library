@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebUI</title>
+       <script src="~/lib/jquery/dist/jquery.min.js"></script>
+     
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/css/gijgo.min.css" integrity="sha256-bH0WSMuCFoG/dxeox/5aOWmaZl729yDg4ylckwSRTfU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+     <li class="nav-item">
+        <a class="nav-link" href="/panel" >
+          Panel
+        </a>        
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="/webapi" >
+          WEBAPI
+        </a>        
+      </li>
+    </ul>
+   <partial name="_SearchBox" />
+
+     <a class="btn btn-outline-light ml-3 rounded-circle" asp-action="Index" asp-controller="User"><i class="far fa-user"></i></a>  
+  
+  </div>
+</nav>
+    </header>
+
+    <div class="container mt-4">
+        <main role="main" class="pb-3">
+          <div class="container">
+					@if (TempData["successmessage"] != null)
+				  {
+					 <div class="alert alert-success">
+						 @TempData["successmessage"]
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+					 </div>
+				  }
+          else if (TempData["failmessage"] != null)
+				  {
+					 <div class="alert alert-danger">
+						 @TempData["failmessage"]
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+					 </div>
+				  }
+			</div>
+            @RenderBody()
+        </main>
+    </div>
+
+ 
+ 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/js/gijgo.min.js" integrity="sha256-YZhUu69bCn9uTqQyKwwQ3GyRypS7eaxp/wmVS282sDI=" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    @RenderSection("scripts",false)
+  <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

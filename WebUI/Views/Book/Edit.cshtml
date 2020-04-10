@@ -1,0 +1,97 @@
+@model Book
+@{
+ViewData["Title"] = "Edit Book ";
+}
+<div class="container">
+    
+<form asp-action="Edit" asp-controller="Book" method="POST" enctype="multipart/form-data">
+    <input type="hidden" asp-for="BookId">
+    <input type="hidden" asp-for="Image">
+ 	<div class="form-group">
+			<label asp-for="Name">Name</label>
+			<input asp-for="Name" class="form-control" placeholder="Please enter book name.">
+		</div>
+		
+		<div class="form-group">
+      <div class="row">
+        <div class="col-md-6">
+          	<label asp-for="PageCount">Page Count</label>
+			<input asp-for="PageCount" class="form-control" placeholder="Please enter page count.">
+
+        </div>
+        <div class="col-md-6">
+          	<label asp-for="PublisherId">Publisher</label>
+			<select class="form-control" asp-for="PublisherId" asp-items="ViewBag.Publisher">
+				<option  disabled selected value="">Select Publisher...</option>
+				
+			</select>
+        </div>
+      </div>
+		
+		</div>
+	
+		<div class="form-group">
+			<label asp-for="Abstract">Abstract</label>
+			<textarea asp-for="Abstract" class="form-control"></textarea>
+		</div>		
+		
+		<div class="form-group" >
+      <div class="row">
+        <div class="col-md-6">
+          	<label asp-for="PublishDate">Publish Date</label>
+			<input asp-format="{0:dd/MM/yyyy}" asp-for="PublishDate" id="datepicker"  />
+        </div>
+        <div class="col-md-6">
+          	<label asp-for="TypeId">Type</label>
+			<select class="form-control" asp-for="TypeId" asp-items="ViewBag.Types">
+				<option disabled selected value="">Select Type...</option>
+				
+			</select>
+        </div>
+      </div>
+		
+		</div>
+
+		<div class="form-group">
+      <div class="row">      
+      <div class="col-md-6">
+        <label asp-for="LanguageId">Language</label>
+		  	<select class="form-control" asp-for="LanguageId" asp-items="ViewBag.Language">
+				<option  disabled selected value="">Select Language...</option>				
+			</select>
+      </div>
+      <div class="col-md-6">
+          <label asp-for="AuthorId">Author</label>
+			    <select class="form-control" asp-for="AuthorId" asp-items="ViewBag.Authors">
+				    <option  disabled selected value="">Select Author...</option>
+				
+		    	</select>
+      </div>
+			</div>
+		</div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2 text-center">
+    	    <img src="~/img/@Model.Image" width="120" alt="@Model.Name" >
+      </div>
+      <div class="col-md-10 m-auto">
+          <div class="custom-file">
+			<input type="file" class="custom-file-input" name="file" id="file">
+			<label class="custom-file-label" for="file">Choose file...</label>
+		
+		</div>
+      </div>
+    </div>
+  </div>
+		
+
+		<div class=" form-group form-check">
+			<label class="form-check-label" asp-for="isApproved">
+				<input class="form-check-input" asp-for="isApproved">
+				Görüntülensin mi ?
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Save</button>
+</form>
+</div>

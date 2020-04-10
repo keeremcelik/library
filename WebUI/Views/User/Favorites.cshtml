@@ -1,0 +1,21 @@
+@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "User Read";
+}
+<div class="container my-4">
+    <h2></h2>
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_UserPageMenu" model="Model" />
+        </div>
+        <div class="col-md-9">    
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Favorite Books</h1>
+                    <p class="lead">Favorite books are listed here.</p>
+                </div>
+            </div>   
+            <partial name="_HomeList" model="Model" />
+        </div>        
+    </div>  
+</div>

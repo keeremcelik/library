@@ -1,0 +1,13 @@
+@model Entity.Type
+@{
+    ViewData["Title"] = "Type Create Page";
+}
+
+<form asp-action="Create" asp-controller="Type" method="POST" >
+ <div class="form-group">
+   <label asp-for="Name">Name</label>
+    <input asp-for="Name" class="form-control" placeholder="Please enter type name.">
+
+  </div>
+<button type="submit" class="btn btn-primary">Create</button>
+</form>
