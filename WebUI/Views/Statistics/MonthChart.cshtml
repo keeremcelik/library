@@ -1,0 +1,50 @@
+@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "Statistics";
+}
+@section scripts
+{
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+        window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("monthChart", {
+	animationEnabled: true,
+	theme: "light1",
+	title: {
+		text: "Monthly book reading rate"
+	},
+	axisY: {
+		scaleBreaks: {
+			autoCalculate: true,
+			type: "wavy",
+			lineColor: "black"
+		},
+		gridThickness: 0
+	},
+	data: [{
+		type: "column",
+		indexLabel: "{y}",
+		dataPoints:  @Html.Raw(ViewBag.DataPoints)
+	}]
+});
+chart.render();
+ 
+}
+    </script>
+    
+}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_StatisticsMenu" model="Model" />
+        </div>
+        <div class="col-md-9">
+           
+            <div class="row">
+              
+                <div id="monthChart" style="height: 370px; width: 100%;"></div>  
+            </div>       
+        </div>        
+    </div>  
+</div>

@@ -20546,6 +20546,11 @@
   "RootNamespace": "WebUI",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Statistics\\PieChart.cshtml",
+      "TargetPath": "Views\\Statistics\\PieChart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Author\\Edit.cshtml",
       "TargetPath": "Views\\Author\\Edit.cshtml",
       "FileKind": "mvc"
@@ -20611,11 +20616,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Webapi\\Index.cshtml",
-      "TargetPath": "Views\\Webapi\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Book\\Edit.cshtml",
       "TargetPath": "Views\\Book\\Edit.cshtml",
       "FileKind": "mvc"
@@ -20643,6 +20643,11 @@
     {
       "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Language\\Details.cshtml",
       "TargetPath": "Views\\Language\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Shared\\_StatisticsMenu.cshtml",
+      "TargetPath": "Views\\Shared\\_StatisticsMenu.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20696,6 +20701,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Statistics\\Index.cshtml",
+      "TargetPath": "Views\\Statistics\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Language\\Edit.cshtml",
       "TargetPath": "Views\\Language\\Edit.cshtml",
       "FileKind": "mvc"
@@ -20728,6 +20738,11 @@
     {
       "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Type\\List.cshtml",
       "TargetPath": "Views\\Type\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\90553\\Desktop\\kerem\\kutuphane\\WebUI\\Views\\Statistics\\MonthChart.cshtml",
+      "TargetPath": "Views\\Statistics\\MonthChart.cshtml",
       "FileKind": "mvc"
     },
     {

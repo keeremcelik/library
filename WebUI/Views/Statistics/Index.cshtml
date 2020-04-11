@@ -1,0 +1,48 @@
+@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "Statistics";
+}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_StatisticsMenu" model="Model" />
+        </div>
+        <div class="col-md-9">
+           <div class="row ">
+                <div class="jumbotron jumbotron-fluid w-100">
+                <div class="container">
+                    <h1 class="display-4">Read Books Statistics</h1>
+                </div>
+            </div>
+           </div>
+            <div class="row">
+                  <table class="table table-bordered table-striped">
+                      <tr>
+                          <th>Total read Page</th>
+                          <td>@ViewBag.SumPage</td>
+                          
+                      </tr>
+                      <tr>
+                          <th>Read book </th>
+                          <td>@ViewBag.ReadBook</td>
+                          
+                      </tr>
+                        <tr>
+                          <th>Unread book </th>
+                          <td>@ViewBag.UnReadBook</td>                          
+                      </tr>
+                       <tr>
+                          <th>Favorite book </th>
+                          <td>@ViewBag.FavBook</td>                          
+                      </tr>
+                       <tr>
+                          <th>Spent Money </th>
+                          <td>@ViewBag.SpentMoney</td>                          
+                      </tr>
+                  </table>
+                <div id="typeChart" style="height: 370px; width: 100%;"></div>  
+                <div id="monthChart" style="height: 370px; width: 100%;"></div>  
+            </div>       
+        </div>        
+    </div>  
+</div>
